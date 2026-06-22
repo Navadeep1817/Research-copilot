@@ -16,7 +16,8 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-API_BASE = "http://localhost:8000"   # change to 8080 if you started uvicorn on 8080
+import os
+API_BASE = os.environ.get("API_BASE", "http://localhost:8000")   # change to 8080 if you started uvicorn on 8080
 
 defaults = {
     "current_report": "",
