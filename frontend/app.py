@@ -73,7 +73,7 @@ with st.sidebar:
                                     "title":  title,
                                 }],
                             },
-                            timeout=120,
+                            timeout=300,
                         )
                         if resp.status_code == 200:
                             data = resp.json()
